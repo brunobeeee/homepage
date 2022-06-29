@@ -1,2 +1,2 @@
-# homepage
+# Homepage
 My first attempt of a small homepage w/ name and recent jobs...
