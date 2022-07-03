@@ -1,2 +1,21 @@
-@import "./absracts/variables";
+@font-face {
+    font-family: 'Misto';
+    src: url('../fonts/Misto.eot');
+    src: url('../fonts/Misto.eot') format('embedded-opentype'),
+         url('../fonts/Misto.woff2') format('woff2'),
+         url('../fonts/Misto.woff') format('woff'),
+         url('../fonts/Misto.ttf') format('truetype'),
+         url('../fonts/Misto.svg#Misto') format('svg');
+}
+
+@font-face {
+    font-family: 'Migur';
+    src: url('../fonts/Migur.ttf') format('truetype');
+}
+
+@import "./abstracts/variables";
 @import "~bootstrap/scss/bootstrap";
+
+:root{
+    --bs-body-font-family: 'Avenir', light;
+}
