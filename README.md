@@ -8,4 +8,4 @@ My first attempt of a small homepage w/ name and recent jobs...
 - (major) Maybe replace the "Meine Referenzen" button with a big scrollable landing page
 
 ## Reminders:
-- build with "nom run build"
+- build with "npm run build"
