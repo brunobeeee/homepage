@@ -1,6 +1,7 @@
 @import "./abstracts/variables";
 @import "~bootstrap/scss/bootstrap";
+@import "../../../node_modules/@fontsource/jost/index.css";
 
 :root{
-    --bs-body-font-family: 'Avenir', light;
+    --bs-body-font-family: 'Jost', 'Avenir', sans-serif;
 }
