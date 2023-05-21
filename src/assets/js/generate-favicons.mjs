@@ -5,12 +5,12 @@ import fs from "fs/promises";
 import path from "path";
 
 const src = "src/media/icon.svg"; // Icon source file path.
-const dest = "src/favicons/"; // Output directory path.
+const dest = "favicons/"; // Output directory path.
 const htmlBasename = "index.html"; // HTML file basename.
 
 // Configuration (see above in the README file).
 const configuration = {
-    path: "src/favicons",
+    path: "favicons/",
     appName: "Bruno Bergmann Homepage",
     appShortName: "Bruno Bergmann",
     appDescription: "A small website about me :)",
