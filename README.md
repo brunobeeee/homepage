@@ -19,7 +19,6 @@ You can archieve a similar experience when cloning the repository to your local 
 
 
 # Cheat-Sheet
-===
 
 ## Distribution:
 ### Build with
