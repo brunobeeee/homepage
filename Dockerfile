@@ -12,6 +12,8 @@ FROM --platform=linux/amd64 node:20 AS runner
 
 COPY --from=development . .
 
+RUN pwd
+
 RUN eval $(ssh-agent) && ssh-add auth/sshkey
 
 WORKDIR /usr/src/app
