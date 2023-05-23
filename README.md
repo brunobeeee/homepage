@@ -10,10 +10,10 @@ My first attempt of a small homepage w/ name and recent jobs.
 # Docker Dev Environment & Docker-Compose
 There are 3 Docker related files in this repository to enroll a fully functioning developement environment inside a Docker container. You have the choice between two options for this task.
 
-## Docker DevEnv (recommended)
+## 1. Docker DevEnv (recommended)
 The `compose-dev.yaml` is written to create a Docker Dev Environment using the desktop client. For this go to 'Dev Environments -> Create' and provide the URL to this repository. Now Docker sets up the container which you can then open in VSCode. It should load a private SSH-Key named "ionos" from your `~/.ssh/` folder into `auth/` inside your container and autmatically add it to the SSH-Keychain inside the container. The directory where all the repository content gets loaded in is `/com.docker.devenvironment.code` which is seemingly the default for this kind of thing.
 
-## Docker-Compose
+## 2. Docker-Compose
 You can archieve a similar experience when cloning the repository to your local drive and executing `docker-compose up -d`. Note that whith this approach the directory where all the repository content gets loaded in is `/usr/src/app`.
 
 
@@ -22,13 +22,13 @@ You can archieve a similar experience when cloning the repository to your local 
 ===
 
 ## Distribution:
-Build with
+### Build with
 ```bash
 npm run build
 ```
-Output in `dist/`
+(output in `dist/`)
 
-Build and deploy (auto upload to my server) with
+### Build and deploy (auto upload to my server) with
 ```bash
 npm run build:deploy
 ```
