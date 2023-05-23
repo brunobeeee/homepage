@@ -16,7 +16,3 @@ WORKDIR "/com.docker.devenvironments.code"
 
 COPY --from=development . .
 
-COPY auth/sshkey auth/sshkey
-
-RUN eval $(ssh-agent) && ssh-add auth/ionos
-
