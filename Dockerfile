@@ -1,8 +1,6 @@
 # development builder
 FROM node:20 AS development
 
-WORKDIR "/com.docker.devenvironments.code"
-
 COPY package*.json ./
 
 RUN npm install
