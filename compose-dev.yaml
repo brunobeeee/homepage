@@ -9,5 +9,7 @@ services:
       context: .
       target: runner
       dockerfile: ./Dockerfile
+    ports:
+      - 80:1234
     volumes:
       - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
