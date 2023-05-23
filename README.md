@@ -1,5 +1,4 @@
 # Homepage
-===
 My first attempt of a small homepage w/ name and recent jobs.
 
 ## Next Steps:
@@ -9,7 +8,6 @@ My first attempt of a small homepage w/ name and recent jobs.
 
 
 # Docker Dev Environment & Docker-Compose
-===
 There are 3 Docker related files in this repository to enroll a fully functioning developement environment inside a Docker container. You have the choice between two options for this task.
 
 ## Docker DevEnv (recommended)
@@ -24,11 +22,17 @@ You can archieve a similar experience when cloning the repository to your local 
 ===
 
 ## Distribution:
-Build and deploy with
+Build with
 ```bash
 npm run build
 ```
-This automatically builds the project. It also deletes all files on the server provided in `auth/user_hostname.txt` and uploads the new ones. Note that this file is not provided in the repository for privacy reasons.
+Output in `dist/`
+
+Build and deploy (auto upload to my server) with
+```bash
+npm run build:deploy
+```
+This automatically builds the project. It also deletes all files on the server provided in `auth/user_hostname.txt` and uploads the new ones. Note that `auth/user_hostname.txt` is not provided in the repository for privacy reasons. You have to load it in manually and write the `user@domain.de` inside it.
 
 ## Reload `node_modules/`
 ```bash
