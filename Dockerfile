@@ -16,7 +16,3 @@ RUN pwd
 
 RUN ls
 
-RUN eval $(ssh-agent) && ssh-add auth/sshkey
-
-WORKDIR /usr/src/app
-
