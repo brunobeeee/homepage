@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node_app:
+    entrypoint:
+      - sleep
+      - infinity
+    build:
+      context: .
+      target: runner
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
