@@ -1,0 +1,15 @@
+version: '3'
+services:
+  node_app:
+    platform: linux/arm64
+    entrypoint:
+      - sleep
+      - infinity
+    build:
+      context: .
+      target: runner
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:1234
+    volumes:
+      - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey

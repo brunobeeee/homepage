@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Read the username and hostname from the file user_hostname.txt
-# NOTE: Normally I would use this path `./auth/user_hostname.txt` but since this script
+# NOTE: Normally I would use this path `../auth/user_hostname.txt` but since this script
 # is called from another script, the path is relative to the other script
 user_hostname=$(cat ./auth/user_hostname.txt)
 

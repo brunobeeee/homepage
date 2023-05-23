@@ -8,7 +8,8 @@
     "clean:favicons": "rm -rf src/favicons/*",
     "generate:favicons": "node --experimental-modules src/assets/js/generate-favicons.mjs",
     "deploy:clean": "./scripts/cleanAndUpload.sh",
-    "build": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html && npm run deploy:clean",
+    "build": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html",
+    "build:deploy": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html && npm run deploy:clean",
     "dev": "parcel"
   },
   "repository": {
@@ -28,11 +29,11 @@
     "favicons": "^7.1.2"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.6.2",
-    "@parcel/packager-xml": "^2.6.2",
-    "@parcel/transformer-sass": "^2.6.2",
-    "@parcel/transformer-webmanifest": "^2.6.2",
-    "@parcel/transformer-xml": "^2.6.2",
-    "parcel": "^2.6.2"
+    "@parcel/packager-raw-url": "^2.8.3",
+    "@parcel/packager-xml": "^2.8.3",
+    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "@parcel/transformer-xml": "^2.8.3",
+    "parcel": "^2.8.3"
   }
 }
