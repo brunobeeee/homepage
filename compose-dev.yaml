@@ -10,4 +10,4 @@ services:
       target: runner
       dockerfile: ./Dockerfile
     volumes:
-      - ~/.ssh/ionos:/com.docker.devenvironments.code/auth
+      - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
