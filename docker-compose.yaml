@@ -2,9 +2,6 @@ version: '3'
 services:
   node_app:
     platform: linux/arm64
-    entrypoint:
-      - sleep
-      - infinity
     build:
       context: .
       target: runner
@@ -15,3 +12,4 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
       - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
+    command: npx parcel src/index.html
