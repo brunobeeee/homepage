@@ -2,7 +2,6 @@
 My first attempt of a small homepage w/ name and recent jobs.
 
 ## Next Steps:
-- move Favicon slightly towards the bottom
 - (major) Replace the "Meine Referenzen" button with a big scrollable landing page
 
 
