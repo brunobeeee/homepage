@@ -2,7 +2,8 @@
 My first attempt of a small homepage w/ name and recent jobs.
 
 ## Next Steps:
-- (major) Replace the "Meine Referenzen" button with a big scrollable landing page
+- add animation for the purple scroll arrows
+- add a paralax like effect for the 3 cv cards
 
 
 

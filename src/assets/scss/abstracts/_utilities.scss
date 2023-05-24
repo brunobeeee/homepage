@@ -40,6 +40,22 @@ $utilities: map-merge(
   )
 );
 
+// Adding more options to the min-viewport-height
+$utilities: map-merge(
+  $utilities,
+  (
+    "min-viewport-height": map-merge(
+      map-get($utilities, "min-viewport-height"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "min-viewport-height"), "values"),
+          (75: 75vh),
+        ),
+      ),
+    ),
+  )
+);
+
 
 
 // Add a max-width option that uses the xl Breakpoint
