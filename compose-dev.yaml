@@ -3,9 +3,8 @@ services:
   node_app:
     platform: linux/arm64
     entrypoint:
-      - npx
-      - parcel
-      - src/index.html
+      - sleep
+      - infinity
     build:
       context: .
       target: runner
