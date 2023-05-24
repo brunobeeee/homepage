@@ -22,6 +22,7 @@ It is highly recommended to start a Parcel dev server inside the docker containe
 ```bash
 npx parcel src/index.html
 ```
+Don't forget to build with `npm run build` before starting the server.
 To view this open `http://localhost:81` in your browser. I really don't know why Docker picks port 81, because I explicitely exposed port 80 in the `compose-dev.yaml`. But nvm it's working...
 
 
