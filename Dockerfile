@@ -15,4 +15,8 @@ COPY --from=development . .
 
 WORKDIR "/com.docker.devenvironments.code"
 
+RUN pwd
+
+RUN ls
+
 RUN npx parcel src/index.html
