@@ -18,6 +18,14 @@ You can archieve a similar experience when cloning the repository to your local 
 
 
 
+# Parcel Dev Server
+It is highly recommended to start a Parcel dev server inside the docker container to view changes on your on the website in real time. Run this command:
+```bash
+npx parcel src/index.html
+```
+To view this open `http://localhost:81` in your browser. I really don't know why Docker picks port 81, because I explicitely exposed port 80 in the `compose-dev.yaml`. But nvm it's working...
+
+
 # Cheat-Sheet
 
 ## Distribution:
