@@ -15,4 +15,3 @@ services:
       - .:/usr/src/app
       - /usr/src/app/node_modules
       - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
-    command: npx parcel src/index.html
