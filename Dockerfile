@@ -14,3 +14,5 @@ FROM --platform=linux/amd64 node:20 AS runner
 COPY --from=development . .
 
 WORKDIR "/com.docker.devenvironments.code"
+
+RUN npx parcel src/index.html
