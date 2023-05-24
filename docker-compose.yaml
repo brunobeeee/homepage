@@ -9,8 +9,6 @@ services:
       context: .
       target: runner
       dockerfile: ./Dockerfile
-    ports:
-      - 80:1234
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
