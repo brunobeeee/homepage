@@ -15,6 +15,8 @@ COPY --from=development . .
 
 WORKDIR "/com.docker.devenvironments.code"
 
+COPY src .
+
 RUN pwd
 
 RUN ls
