@@ -6,3 +6,18 @@
 :root{
     --bs-body-font-family: 'Jost', 'Avenir', sans-serif;
 }
+
+.floating {
+    transform: translate(0);
+    animation: fl 3s infinite ease-in-out;
+
+}
+
+@keyframes fl {
+    0%{
+        transform: translateY();
+    }
+    50%{
+        transform: translateY(5);
+    }
+}

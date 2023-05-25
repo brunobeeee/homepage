@@ -2,8 +2,8 @@
 My first attempt of a small homepage w/ name and recent jobs.
 
 ## Next Steps:
-- add animation for the purple scroll arrows
-- add a paralax like effect for the 3 cv cards
+- add contact information
+- add a paralax like effect for the 3 cv cards (seems to be harden than I thought)
 
 
 
