@@ -4,3 +4,4 @@
 /dist/
 auth
 favicons
+.env
