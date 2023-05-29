@@ -1,3 +1,6 @@
+# Why Branch?
+When sending a mail via the contact form you will get a CORS error. For now this is my best solution is to manually start a proxy server with `node src/assets/js/mail-proxy.mjs` that recieves the data instead. But sadly this will not work with my webhosting. I created this branch to save my progress.
+
 # Homepage
 My first attempt of a small homepage w/ name and recent jobs.
 

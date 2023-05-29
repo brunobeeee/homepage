@@ -1,8 +1,9 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/utilities";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/utilities";
 
-// Enabling responsiveness for the font size (eg. fs-lg-1, fs-sm-4)
+// Enable responsiveness for the font size (eg. fs-lg-1, fs-sm-4)
 $utilities: map-merge(
   $utilities, (
     "font-size": map-merge(
@@ -12,7 +13,7 @@ $utilities: map-merge(
   )
 );
 
-// Adding more options to the viewport height
+// Add more options to the viewport height
 $vh-add: (50: 50vh, 30: 30vh);
 
 $utilities: map-merge(
@@ -30,7 +31,7 @@ $utilities: map-merge(
   )
 );
 
-// Enabling responsiveness for the viewport height
+// Enabl responsiveness for the viewport height
 $utilities: map-merge(
   $utilities, (
     "viewport-height": map-merge(
@@ -40,7 +41,7 @@ $utilities: map-merge(
   )
 );
 
-// Adding more options to the min-viewport-height
+// Add more options to the min-viewport-height
 $utilities: map-merge(
   $utilities,
   (
@@ -58,7 +59,9 @@ $utilities: map-merge(
 
 
 
-// Add a max-width option that uses the xl Breakpoint
+// Add a max-width option that uses the lg and xl Breakpoint
+$mw-add: (md: map-get($grid-breakpoints, "md"), lg: map-get($grid-breakpoints, "lg"), xl: map-get($grid-breakpoints, "xl"));
+
 $utilities: map-merge(
   $utilities,
   (
@@ -67,7 +70,7 @@ $utilities: map-merge(
       (
         values: map-merge(
           map-get(map-get($utilities, "max-width"), "values"),
-          (xl: map-get($grid-breakpoints, "xl")),
+          $mw-add,
         ),
       ),
     ),
