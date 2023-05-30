@@ -42,6 +42,8 @@ $utilities: map-merge(
 );
 
 // Adding more options to the min-viewport-height
+$min-viewport-height-add: (25: 25vh, 50: 50vh, 75: 75vh);
+
 $utilities: map-merge(
   $utilities,
   (
@@ -50,7 +52,7 @@ $utilities: map-merge(
       (
         values: map-merge(
           map-get(map-get($utilities, "min-viewport-height"), "values"),
-          (75: 75vh),
+          $min-viewport-height-add,
         ),
       ),
     ),
@@ -59,7 +61,17 @@ $utilities: map-merge(
 
 
 
-// Add a max-width option that uses the xl Breakpoint
+// Add a max-width option that uses Breakpoints
+$mw-add: (
+  xs: map-get($grid-breakpoints, "xs"),
+  sm: map-get($grid-breakpoints, "sm"),
+  md: map-get($grid-breakpoints, "md"),
+  lg: map-get($grid-breakpoints, "lg"),
+  xl: map-get($grid-breakpoints, "xl"),
+  xxl: map-get($grid-breakpoints, "xxl"),
+  xxxl: 1800px
+  );
+
 $utilities: map-merge(
   $utilities,
   (
@@ -68,7 +80,7 @@ $utilities: map-merge(
       (
         values: map-merge(
           map-get(map-get($utilities, "max-width"), "values"),
-          (xl: map-get($grid-breakpoints, "xl")),
+          $mw-add,
         ),
       ),
     ),

@@ -1,6 +1,6 @@
 {
   "name": "homepage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "My first attempt of a small homepage w/ name and recent jobs...",
   "source": "./src/index.html",
   "scripts": {
