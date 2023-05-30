@@ -13,4 +13,3 @@ services:
       - 80:1234
     volumes:
       - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
-    command: sh -c "if [ ! -f /app/.initialized ]; then npm install && touch /app/.initialized; fi && npm start"
