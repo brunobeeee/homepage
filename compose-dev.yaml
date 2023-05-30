@@ -3,8 +3,13 @@ services:
   node_app:
     platform: linux/arm64
     entrypoint:
-      - sleep
-      - infinity
+      - sh
+      - -c
+      - |
+        if [ ! -f /app/.initialized ]; then
+          npm install && touch /app/.initialized;
+        fi;
+        sleep infinity
     build:
       context: .
       target: runner
@@ -13,3 +18,4 @@ services:
       - 80:1234
     volumes:
       - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
+      - ./app:/app
