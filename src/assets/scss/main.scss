@@ -34,3 +34,9 @@
         background-color: lighten($info, 2%) !important;
     }
 }
+
+.img-rounded-border {
+    object-fit: cover; /* Bildverhältnis beibehalten und in den Kreis zuschneiden */
+    border: 3px solid $secondary; /* Rand hinzufügen */
+    border-radius: 50%; /* Kreisform erstellen */
+}

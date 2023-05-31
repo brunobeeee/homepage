@@ -14,7 +14,7 @@ $utilities: map-merge(
 );
 
 // Adding more options to the viewport height
-$vh-add: (50: 50vh, 30: 30vh);
+$vh-add: (25: 25vh, 50: 50vh, 75: 75vh);
 
 $utilities: map-merge(
   $utilities,
