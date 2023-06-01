@@ -7,6 +7,16 @@
     --bs-body-font-family: 'Jost', 'Avenir', sans-serif;
 }
 
+.ios-peek {
+    position: fixed;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    background-color: $secondary;
+    height: 50vh;
+    width: 100vw;
+}
+
 .floating {
     transform: translate(0);
     animation: fl 3s infinite ease-in-out;
