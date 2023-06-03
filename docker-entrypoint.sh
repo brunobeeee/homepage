@@ -4,6 +4,7 @@ echo "npm install"
 npm install
 
 echo "starting dev server"
-npm run dev
+npx parcel src/index.html
 
-echo "dev server running on 'localhost:1234'"
+# keep container running
+tail -f /dev/null
