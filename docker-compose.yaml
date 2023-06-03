@@ -2,13 +2,14 @@ version: '3'
 services:
   node_app:
     platform: linux/arm64
-    command: sh -c "chmod +x docker-entrypoint.sh && ./docker-entrypoint.sh"
+    entrypoint:
+      - npm
+      - run
+      - dev
     build:
       context: .
       target: runner
     ports:
       - 1234:1234
-    environment:
-      - PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/src/app/node_modules/.bin
     volumes:
       - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
