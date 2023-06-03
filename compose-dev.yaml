@@ -2,10 +2,7 @@ version: '3'
 services:
   node_app:
     platform: linux/arm64
-    entrypoint:
-      - npm
-      - run
-      - dev
+    command: sh -c "chmod +x docker-entrypoint.sh && ./docker-entrypoint.sh"
     build:
       context: .
       target: runner
