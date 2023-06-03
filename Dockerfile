@@ -1,16 +1,6 @@
-# development builder
-FROM node:20 AS development
+FROM --platform=linux/amd64 node:20
 
-COPY package*.json ./
+COPY . .
 
-RUN npm install
-
-RUN npm install --arch=arm64 --platform=linuxmusl sharp
-
-
-# development runner (ARM/M1 compatible)
-FROM --platform=linux/amd64 node:20 AS runner
-
-COPY --from=development . .
-
-WORKDIR "/com.docker.devenvironments.code"
+RUN chmod +x /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
