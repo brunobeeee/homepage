@@ -5,11 +5,7 @@ services:
     entrypoint:
       - sh
       - -c
-      - |
-        if [ ! -f /app/.initialized ]; then
-          npm install && touch /app/.initialized;
-        fi;
-        sleep infinity
+      - npm run dev
     build:
       context: .
       target: runner
