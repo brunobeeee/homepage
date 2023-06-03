@@ -2,14 +2,6 @@ version: '3'
 services:
   node_app:
     platform: linux/arm64
-    entrypoint:
-      - sh
-      - -c
-      - cd /com.docker.devenvironments.code && npm run dev
     build:
       context: .
       target: runner
-    ports:
-      - 1234:1234
-    volumes:
-      - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
