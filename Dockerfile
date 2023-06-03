@@ -1,4 +1,4 @@
-# development builder
+# development builder (faster than runner, do heavy tasks in here!)
 FROM node:20 AS development
 
 WORKDIR "/com.docker.devenvironments.code"
@@ -6,6 +6,9 @@ WORKDIR "/com.docker.devenvironments.code"
 COPY . .
 
 RUN npm install
+
+RUN npm run build
+
 
 
 # development runner (ARM/M1 compatible)
