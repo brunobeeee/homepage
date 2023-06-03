@@ -6,9 +6,6 @@ services:
       - sh
       - -c
       - cd /com.docker.devenvironments.code && npm run dev
-    build:
-      context: .
-      target: runner
     ports:
       - 1234:1234
     volumes:
