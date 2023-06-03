@@ -1,10 +1,8 @@
 #!/bin/bash
 
-echo "npm install"
 npm install
 
-echo "starting dev server"
-npx parcel src/index.html
+npm run build
 
-pwd
-ls
+echo "starting dev server"
+exec npx parcel src/index.html
