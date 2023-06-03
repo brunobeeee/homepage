@@ -3,9 +3,9 @@ services:
   node_app:
     platform: linux/arm64
     entrypoint:
-      - npm
-      - run
-      - dev
+      - sh
+      - -c
+      - cd /com.docker.devenvironments.code && npm run dev
     build:
       context: .
       target: runner
