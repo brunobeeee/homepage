@@ -6,5 +6,5 @@ npm install
 echo "starting dev server"
 npx parcel src/index.html
 
-# keep container running
-tail -f /dev/null
+pwd
+ls
