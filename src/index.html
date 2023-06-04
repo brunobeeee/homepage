@@ -78,7 +78,7 @@
     <div class="row vh-100 w-100 mw-lg mx-auto px-5 d-flex justify-content-center align-content-center">
       
       <div class="col-12 col-lg-6 vh-lg-50 m-0 p-0 d-flex justify-content-center justify-content-lg-start align-items-end align-items-lg-start">
-        <img class="img-rounded-border mw-50" src="media/brunobergmann.png" alt="Portrait" style="height: intrinsic; max-width: 250px; max-height: 50vh">
+        <img class="img-rounded-border mw-50" src="media/portrait.jpg" alt="Portrait" style="height: intrinsic; max-width: 250px; max-height: 50vh">
       </div>
 
       <div class="col-12 col-lg-6 m-0 p-0 d-flex justify-content-center justify-content-lg-end align-items-lg-end">
@@ -95,13 +95,15 @@
       </div>
 
       <div class="col-12 col-lg-9 m-0 p-0 mt-3 d-flex justify-content-center justify-content-lg-end align-items-lg-end">
-        <i class="fa-solid fa-angles-down fs-3 text-secondary floating" data-text="float"></i>
+        <button onclick="scrollToSection()" class="scrollBtn">
+          <i class="fa-solid fa-angles-down fs-3 text-secondary floating" data-text="float"></i>
+        </button>
       </div>
 
     </div>
 
     <!-- Wrapper für die 3 Cards -->
-    <div class="d-flex min-vh-50 mt-4 mw-xxxl mx-auto flex-wrap justify-content-around">
+    <div id="scrollTarget" class="d-flex min-vh-50 mt-4 mw-xxxl mx-auto flex-wrap justify-content-around">
       <!-- Berufserfahrung - Card -->
       <div class="card mx-1 mx-md-3 mb-5 p-3 bg-transparent border-0" style="width: 30rem;">
         <p class="fs-2 fw-bold mb-0">Berufserfahrung</p>
@@ -231,7 +233,14 @@
 
 
     <!-- This div can be seen when overscrolling on iOS -->
-    <div class="ios-peek"></div>
+    <!-- <div class="ios-peek"></div> -->
+
+    <script>
+      function scrollToSection() {
+        var targetElement = document.getElementById('scrollTarget');
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      </script>
 
   </body>
 </html>

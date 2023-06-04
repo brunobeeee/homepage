@@ -20,7 +20,12 @@
 .floating {
     transform: translate(0);
     animation: fl 3s infinite ease-in-out;
+}
 
+.scrollBtn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
 @keyframes fl {

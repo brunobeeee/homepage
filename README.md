@@ -2,7 +2,6 @@
 My first attempt of a small homepage w/ name and recent jobs.
 
 ## Next Steps:
-- add contact form
 - add a paralax like effect for the 3 cv cards (seems to be harden than I thought)
 
 
@@ -14,17 +13,16 @@ There are 3 Docker related files in this repository to enroll a fully functionin
 The `compose-dev.yaml` is written to create a Docker Dev Environment using the desktop client. For this go to 'Dev Environments -> Create' and provide the URL to this repository. Now Docker sets up the container which you can then open in VSCode. It should load a private SSH-Key named "ionos" from your `~/.ssh/` folder into `auth/` inside your container and which you have to manually add to the SSH keychain inside the container with `ssh-add auth/sshkey`. The directory where all the repository content gets loaded in is `/com.docker.devenvironment.code` which is seemingly the default for this kind of thing.
 
 ## 2. Docker-Compose
-You can archieve a similar experience when cloning the repository to your local drive and executing `docker-compose up -d`. Note that whith this approach the directory where all the repository content gets loaded in is `/usr/src/app`.
+You can archieve a similar experience when cloning the repository to your local drive and executing `docker-compose up -d`. But I find it a bit useless because the development part happens on the host system. E.g. when I run `npm run build` it uses the npm installed on my host. For development you would want to run the commands *inside* the container which can be archieved with the first method.
 
 
 
 # Parcel Dev Server
 It is highly recommended to start a Parcel dev server inside the docker container to view changes on your on the website in real time. Run this command:
 ```bash
-npx parcel src/index.html
+npm run dev
 ```
-Don't forget to build with `npm run build` before starting the server.
-To view this open `http://localhost:81` in your browser. I really don't know why Docker picks port 81, because I explicitely exposed port 80 in the `compose-dev.yaml`. But nvm it's working...
+To view this open `http://localhost:1234` in your browser.
 
 
 # Cheat-Sheet
@@ -34,15 +32,21 @@ To view this open `http://localhost:81` in your browser. I really don't know why
 ```bash
 npm run build
 ```
-(output in `dist/`)
+(outputs all files compressed in `dist/`)
 
-### Build and deploy (auto upload to my server) with
+### Build and deploy (auto upload to my server)
+Add your private SSH key to the keychain with
 ```bash
-npm run build:deploy
+ssh-add auth/sshkey
 ```
-This automatically builds the project. It also deletes all files on the server provided in `auth/user_hostname.txt` and uploads the new ones. Note that `auth/user_hostname.txt` is not provided in the repository for privacy reasons. You have to load it in manually and write the `user@domain.de` inside it.
+And upload the files:
+```bash
+npm run deploy
+```
+This automatically builds the project. It also deletes all files on the server provided in `auth/user_hostname.txt` and uploads the new ones.
+Note that `auth/user_hostname.txt` is not provided in the repository for privacy reasons. You have to load it in manually and write the `user@domain.de` inside it.
 
-## Reload `node_modules/`
+## Load all `node_modules/`
 ```bash
 npm install
 ```
