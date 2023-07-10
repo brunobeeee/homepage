@@ -8,5 +8,3 @@ services:
       - cd /com.docker.devenvironments.code && npm run dev
     ports:
       - 1234:1234
-    volumes:
-      - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey

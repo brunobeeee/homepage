@@ -7,9 +7,8 @@
     "clean:dist": "rm -rf dist/*",
     "clean:favicons": "rm -rf src/favicons/*",
     "generate:favicons": "node --experimental-modules src/assets/js/generate-favicons.mjs",
-    "deploy:clean": "./scripts/cleanAndUpload.sh",
     "build": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html",
-    "deploy": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html && npm run deploy:clean",
+    "deploy": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html && ./scripts/deployToGitIo.sh",
     "dev": "npm run build && parcel"
   },
   "repository": {
