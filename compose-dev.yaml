@@ -15,5 +15,3 @@ services:
       # So to use 1234 for the second container (the one that is important) I just do -1.
       # I know, im sorry.
       - 1233:1234
-    volumes:
-      - ~/.ssh/ionos:/com.docker.devenvironments.code/auth/sshkey
