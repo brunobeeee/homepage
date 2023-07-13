@@ -1,7 +1,0 @@
-version: '3'
-services:
-  node_app:
-    platform: linux/arm64
-    build:
-      context: .
-      target: runner
