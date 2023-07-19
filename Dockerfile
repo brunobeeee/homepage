@@ -7,11 +7,12 @@ COPY . .
 
 RUN npm install
 
-RUN npm run build
-
-
 
 # development runner (ARM/M1 compatible)
 FROM --platform=linux/amd64 node:20 AS runner
 
 COPY --from=development . .
+
+WORKDIR "/com.docker.devenvironments.code"
+
+CMD npm run dev

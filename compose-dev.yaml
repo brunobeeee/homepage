@@ -1,6 +1,6 @@
 version: '3'
 services:
-  node_app:
+  app:
     platform: linux/arm64
     build:
       context: .
