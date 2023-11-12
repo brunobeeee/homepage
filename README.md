@@ -2,19 +2,14 @@
 A small homepage with contact details and recent jobs.
 
 ## Getting started
-You can start this project in two ways. Either with Docker-Compose or Docker Dev Environments in the desktop client.
-
-### Docker-Compose (recommended)
 Clone this Repository and start the container.
 ```
+git clone git@github.com:brunobeeee/homepage.git
+cd homepage
 docker-compose up -d
 ```
 
 Now you can open VSCode and connect to the container via the Remote-Container extension. The directory where all the repository content gets loaded in is `/com.docker.devenvironment.code`.
-
-### Docker DevEnv
-The `compose-dev.yaml` is written to create a Docker Dev Environment using the desktop client. For this go to 'Dev Environments -> Create' and provide the URL to this repository. Now Docker sets up the container which you can then open in VSCode. The directory where all the repository content gets loaded in is `/com.docker.devenvironment.code` inside the container.
-
 
 
 ## Parcel Dev Server
