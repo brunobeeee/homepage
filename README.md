@@ -13,11 +13,10 @@ Now you can open VSCode and connect to the container via the Remote-Container ex
 
 
 ## Parcel Dev Server
-It is highly recommended to start a Parcel dev server inside the docker container to view changes on your on the website in real time. If you chose Docker-Compose this should run automatically. If you chose Docker DevEnv you have to start it manually.
+It is highly recommended to start a Parcel dev server inside the docker container to view changes on your on the website in real time on `http://localhost:1234`. If you use the Docker-Compose this should run automatically. If you use anything other than that you may have to start it manually.
 ```bash
 npm run dev
 ```
-To view it open `http://localhost:1234` in your browser.
 
 
 ## Cheat-Sheet
@@ -28,12 +27,13 @@ npm run build
 ```
 (outputs all files compressed in `dist/`)
 
-## Load all `node_modules/`
+## Setup project by loading all `node_modules/`
 ```bash
 npm install
 ```
 
 ## Reinstall Parcel
+This sometimes fixes bugs.
 ```bash
 npm uninstall parcel
 npm install --save-dev parcel
