@@ -5,3 +5,4 @@ dist
 auth
 favicons
 .env
+.env.prod
