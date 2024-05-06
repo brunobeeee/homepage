@@ -1,0 +1,9 @@
+.github
+.git
+.DS_STORE
+.env
+.env.prod
+
+homepage/node_modules
+homepage/dist
+homepage/.parcel-cache

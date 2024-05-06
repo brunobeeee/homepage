@@ -10,6 +10,9 @@ echo "Username: $username"
 echo "Servername: $servername"
 echo "Uploaddir: $uploaddir"
 
+echo "Dist looks like this:"
+ls dist
+
 echo
 echo "Connect to ftp server"
 lftp -u "$username","$password" ftp://$servername:21 << EOF
