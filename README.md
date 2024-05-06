@@ -31,3 +31,8 @@ To run this container execute
 ```
 docker compose -f production.yml up --build
 ```
+
+As the container builds, uploads, then exits you may want to automatically remove it afterwards
+```
+docker compose -f production.yml up --build && docker compose -f production.yml rm -fsv
+```
