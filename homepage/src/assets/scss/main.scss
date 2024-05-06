@@ -55,3 +55,18 @@
     border: 3px solid $secondary; /* Rand hinzufügen */
     border-radius: 50%; /* Kreisform erstellen */
 }
+
+// Notwendig für snap-scrolling
+html {
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    > div {
+        position: relative;
+        scroll-snap-align: start;
+    }
+}
