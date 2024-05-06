@@ -2,39 +2,32 @@
 A small homepage with contact details and recent jobs.
 
 ## Getting started
-Clone this Repository and start the container.
+Clone this Repository and start the dev container.
 ```
 git clone git@github.com:brunobeeee/homepage.git
 cd homepage
-docker-compose up -d
+docker compose up -d
 ```
 
-Now you can open VSCode and connect to the container via the Remote-Container extension. The directory where all the repository content gets loaded in is `/com.docker.devenvironment.code`.
+This starts a dev container with webserver on `localhost:1234`. You can attach to the container with:
+```
+docker compose exec homepage ash
+```
 
 
-## Parcel Dev Server
+### Parcel Dev Server
 It is highly recommended to start a Parcel dev server inside the docker container to view changes on your on the website in real time on `http://localhost:1234`. If you use the Docker-Compose this should run automatically. If you use anything other than that you may have to start it manually.
-```bash
+```
 npm run dev
 ```
 
+## Production
+This repo comes with a production container. It executes these steps:
+1. Freshly `npm install` all node modules
+2. Build & bundle the website into `dist`
+3. Upload the bundle to a FTP server. The credentials have to be provided in `.env.prod`
 
-## Cheat-Sheet
-
-### Build with
-```bash
-npm run build
+To run this container execute
 ```
-(outputs all files compressed in `dist/`)
-
-## Setup project by loading all `node_modules/`
-```bash
-npm install
-```
-
-## Reinstall Parcel
-This sometimes fixes bugs.
-```bash
-npm uninstall parcel
-npm install --save-dev parcel
+docker compose -f production.yml up --build
 ```
