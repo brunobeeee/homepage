@@ -4,25 +4,10 @@
   "description": "My first attempt of a small homepage",
   "source": "./src/index.html",
   "scripts": {
-    "clean:dist": "rm -rf dist/*",
-    "clean:favicons": "rm -rf src/favicons/*",
-    "generate:favicons": "node --experimental-modules src/assets/js/generate-favicons.mjs",
-    "deploy:clean": "./scripts/cleanAndUpload.sh",
-    "build": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html",
-    "deploy": "npm run clean:dist && npm run clean:favicons && npm run generate:favicons && parcel build src/index.html && npm run deploy:clean",
-    "dev": "npm run build && parcel"
+    "favicons": "node --experimental-modules src/assets/js/generate-favicons.mjs",
+    "build": "npm run favicons && parcel build",
+    "dev": "npm run favicons && parcel"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/brunobeeee/homepage.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/brunobeeee/homepage/issues"
-  },
-  "homepage": "https://github.com/brunobeeee/homepage#readme",
   "dependencies": {
     "@fontsource/jost": "^4.5.13",
     "bootstrap": "^5.1.3",

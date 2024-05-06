@@ -3,10 +3,10 @@ services:
   homepage:
     image: node:21.7.3-alpine3.18
     container_name: homepage-dev
-    entrypoint: ash docker-entrypoint.sh
+    working_dir: /homepage
+    entrypoint: ./docker-entrypoint.sh
     ports:
       - 1234:1234
     volumes:
       - ./homepage:/homepage
-    working_dir: /homepage
 
