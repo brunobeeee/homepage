@@ -1,13 +1,10 @@
-# PRODUCTION DOCKERFILE #
-FROM node:21.7.3-alpine3.18
+FROM node:20-alpine
 
-RUN apk update && \
-    apk add --no-cache lftp
+WORKDIR /app
 
-WORKDIR "/homepage"
-
-COPY homepage .
-
+COPY package.json package-lock.json* ./
 RUN npm install
 
-RUN npm run build
+COPY . .
+
+CMD ["npm", "run", "dev"]

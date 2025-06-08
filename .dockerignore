@@ -4,6 +4,6 @@
 .env
 .env.prod
 
-homepage/node_modules
-homepage/dist
-homepage/.parcel-cache
+node_modules
+dist
+.parcel-cache
